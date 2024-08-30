@@ -18,7 +18,9 @@ pipeline{
                  stage ("Deploy to Staging"){
                     steps {
                       sh"docker build -t java ."
-                      sh"docker run -it -d --name jar -p 8081:8081 java
+                      sh '''
+docker run -it -d --name jar -p 8081:8081 java
+'''
                     }
                            }
       }
