@@ -17,7 +17,6 @@ pipeline{
         }
                  stage ("Deploy to Staging"){
                     steps {
-                      sh 'docker rm -f \$(docker ps -aq)'
  
                       sh"docker build -t java ."
                       sh '''
